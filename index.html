@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Tuyển Sinh</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main-bg">
+    <div class="container">
+      <h2 class="title">Quản lý tuyển sinh</h2>
+      <form id="admissionForm" class="admission-form">
+        <div class="form-row">
+          <input
+            type="number"
+            step="0.01"
+            id="diemChuan"
+            placeholder="Điểm chuẩn"
+            required
+            class="input-field"
+          />
+          <select id="khuVuc" class="input-field">
+            <option value="X">Chọn khu vực</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+          </select>
+          <select id="doiTuong" class="input-field">
+            <option value="0">Chọn đối tượng</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <input
+            type="number"
+            step="0.01"
+            id="diem1"
+            placeholder="Điểm môn thứ 1"
+            required
+            class="input-field"
+          />
+          <input
+            type="number"
+            step="0.01"
+            id="diem2"
+            placeholder="Điểm môn thứ 2"
+            required
+            class="input-field"
+          />
+          <input
+            type="number"
+            step="0.01"
+            id="diem3"
+            placeholder="Điểm môn thứ 3"
+            required
+            class="input-field"
+          />
+        </div>
+        <button type="submit" class="submit-btn">Kết Quả</button>
+      </form>
+      <div id="ketQua" class="result-box"></div>
+    </div>
+    <!-- Bài 2: Tính tiền điện -->
+    <div class="container">
+      <h2 class="title">Tính tiền điện</h2>
+      <form id="electricForm" class="admission-form">
+        <div class="form-row">
+          <input
+            type="text"
+            id="tenChuHo"
+            placeholder="Tên chủ hộ"
+            required
+            class="input-field"
+          />
+          <input
+            type="number"
+            id="soKw"
+            placeholder="Số Kw tiêu thụ"
+            required
+            class="input-field"
+          />
+        </div>
+        <button type="submit" class="submit-btn">Tính Tiền</button>
+      </form>
+      <div id="ketQuaDien" class="result-box"></div>
+    </div>
+    <div class="container">
+      <h2 class="title">Tính thuế thu nhập cá nhân</h2>
+      <form id="taxForm" class="admission-form">
+        <div class="form-row">
+          <input
+            type="text"
+            id="taxName"
+            placeholder="Họ tên"
+            required
+            class="input-field"
+          />
+          <input
+            type="number"
+            id="taxIncome"
+            placeholder="Tổng thu nhập năm (triệu)"
+            required
+            class="input-field"
+          />
+          <input
+            type="number"
+            id="taxDep"
+            placeholder="Số người phụ thuộc"
+            required
+            class="input-field"
+          />
+        </div>
+        <button type="submit" class="submit-btn">Tính Thuế</button>
+      </form>
+      <div id="ketQuaThue" class="result-box"></div>
+    </div>
+    <div class="container">
+      <h2 class="title">Tính tiền cáp</h2>
+      <form id="cableForm" class="admission-form">
+        <div class="form-row">
+          <input
+            type="text"
+            id="maKhachHang"
+            placeholder="Mã khách hàng"
+            required
+            class="input-field"
+          />
+          <select id="loaiKhachHang" class="input-field" required>
+            <option value="">Chọn loại khách hàng</option>
+            <option value="ND">Nhà dân</option>
+            <option value="DN">Doanh nghiệp</option>
+          </select>
+          <input
+            type="number"
+            id="soKenh"
+            placeholder="Số kênh cao cấp"
+            min="0"
+            required
+            class="input-field"
+          />
+        </div>
+        <div class="form-row" id="row-ketnoi" style="display: none">
+          <input
+            type="number"
+            id="soKetNoi"
+            placeholder="Số kết nối"
+            min="1"
+            class="input-field"
+          />
+        </div>
+        <button type="submit" class="submit-btn">Tính Tiền Cáp</button>
+      </form>
+      <div id="ketQuaCap" class="result-box"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
